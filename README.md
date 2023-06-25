@@ -20,7 +20,10 @@ For proper formatting, there are several operations that can be used to specify 
 
 Examples are shown below:
 
-`#include <stdio.h>
+
+```
+
+#include <stdio.h>
 int main()
 {
 char str[] = "Hello, world";
@@ -34,17 +37,23 @@ printf("%20.10s:\n", str);
 printf("%-20.10s:\n", str);
 
 return (0);
-}`
+}
+
+```
 the output of this code is as follows:
 
-`Hello, world:
+```
+
+Hello, world:
 Hello, world:
 Hello, world:
 Hello, world:
 Hello, world:
 Hello, world        :
           Hello, wor:
-	  Hello, wor`
+	  Hello, wor
+
+```
 
 	  THE PROJECT:
 This project involves writing our own printf function that can format inputs and pritn out the desired output to the standard out.
