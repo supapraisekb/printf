@@ -13,15 +13,14 @@ The are two types of printf objects:
 
 2. COnversion Specification objects: These objects are employed to confert and print the arguments  of the printf function. The conversion specifiction object begins with a % sign and ends with a conversion character ( i, d, s, p, o, g, G, x, X, f, etc).
 For proper formatting, there are several operations that can be used to specify how the string should appear on the standard output by putting a cahracter between the % and the conversion character we can have the following in ordeer:
-
-a. minus sign (-): It specifies the left adjustment of the convertes argument
-b. a number: The number denotes the field width of the intended string for formatting
-c. a period (.): It separates the field width from the precision
-d. another number: The precision that specifies the minimum field width
+* a. minus sign (-): It specifies the left adjustment of the convertes argument
+* b. a number: The number denotes the field width of the intended string for formatting
+* c. a period (.): It separates the field width from the precision
+* d. another number: The precision that specifies the minimum field width
 
 Examples are shown below:
 
-#include <stdio.h>
+`#include <stdio.h>
 int main()
 {
 char str[] = "Hello, world";
@@ -35,17 +34,17 @@ printf("%20.10s:\n", str);
 printf("%-20.10s:\n", str);
 
 return (0);
-}
+}`
 the output of this code is as follows:
 
-Hello, world:
+`Hello, world:
 Hello, world:
 Hello, world:
 Hello, world:
 Hello, world:
 Hello, world        :
           Hello, wor:
-	  Hello, wor
+	  Hello, wor`
 
 	  THE PROJECT:
 This project involves writing our own printf function that can format inputs and pritn out the desired output to the standard out.
