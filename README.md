@@ -1,6 +1,6 @@
 This is a group project by
 
-Ifeanyi, Adaeze and Eze, Ihendu Praise.
+Ifeanyi, Ada and Eze, Ihendu Praise.
 
 
 printf in C language is used to format and output contents to the standard output.
@@ -11,7 +11,7 @@ int printf (char *format, arg1, arg2, ...).
 The are two types of printf objects:
 1. The Ordinary Character: The ordinary character object copies strings of characters to the output stream
 
-2. COnversion Specification objects: These objects are employed to confert and print the arguments  of the printf function. The conversion specifiction object begins with a % sign and ends with a conversion character ( i, d, s, p, o, g, G, x, X, f, etc).
+2. COnversion Specification objects: These objects are employed to convert and print the arguments  of the printf function. The conversion specifiction object begins with a % sign and ends with a conversion character ( i, d, s, p, o, g, G, x, X, f, etc).
 For proper formatting, there are several operations that can be used to specify how the string should appear on the standard output by putting a cahracter between the % and the conversion character we can have the following in ordeer:
 * a. minus sign (-): It specifies the left adjustment of the convertes argument
 * b. a number: The number denotes the field width of the intended string for formatting
