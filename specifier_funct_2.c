@@ -11,7 +11,7 @@
 char *address_spec(va_list s)
 {
 unsigned int input_number = va_arg(s, unsigned int);
-unsigned int count = 0;
+unsigned int i, count = 0;
 unsigned int temp = input_number;
 char *address;
 
@@ -27,7 +27,7 @@ if (address == NULL)
 return (NULL);
 
 /* Convert the input number to hexadecimal and store it in the address string*/
-for (unsigned int i = count - 1; i >= 0; i--)
+for (i = count - 1; i != 0; i--)
 {
 unsigned int digit = (input_number >> (i * 4)) & 0xF;
 if (digit < 10)
@@ -57,11 +57,14 @@ int index = 0;
 input_str = va_arg(s, char *);
 if (input_str == NULL)
 return (NULL);
+result_rot13 = malloc((_strlen(input_str) + 1) * sizeof(char));
+if (result_rot13 == NULL)
+	return (NULL);
 while (input_str[index] != '\0')
 {
-if ((input_str[index] >= 'a' &
-input_str[index] <= 'z') || (input_str[index]
->= 'A' && input_str[index]) <= 'Z')
+if (((input_str[index] >= 'a') && (input_str[index]
+				<= 'z')) || ((input_str[index] >= 'A')
+				&& input_str[index] <= 'Z'))
 {
 result_rot13[index] =
 ((input_str[index] - 'a' + 13) % 26) + 'a';

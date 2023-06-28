@@ -86,7 +86,6 @@ return (str);
 */
 
 char *unsigned_spec(va_list un_signd)
-char *unsigned_spec(va_list un_signd)
 {
 unsigned int x = va_arg(un_signd, unsigned int);
 unsigned int counter = 0;

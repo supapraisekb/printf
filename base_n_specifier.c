@@ -47,10 +47,11 @@ return (bin_str);
 
 char *octal_spec(va_list s)
 {
+char *str;
 unsigned long int oct_input = va_arg(s, unsigned long int);
 unsigned long int num_oct_index = 1;
 unsigned long int decimal_holder = 0;
-unsigned long int index = 0;
+unsigned long int i, index = 0;
 
 while (oct_input)
 {
@@ -60,11 +61,11 @@ num_oct_index *= 10;
 index++;
 }
 
-char *str = malloc((index + 1) * sizeof(char));
+str = malloc((index + 1) * sizeof(char));
 if (str == NULL)
 return (NULL);
 
-for (unsigned long int i = 0; i < index; i++)
+for (i = 0; i < index; i++)
 {
 str[i] = (decimal_holder / num_oct_index) % 10 + '0';
 num_oct_index /= 10;
@@ -83,7 +84,7 @@ return (str);
 char *lower_hex_spec(va_list s)
 {
 unsigned int input_number = va_arg(s, unsigned int);
-unsigned int count = 0;
+unsigned int index, count = 0;
 unsigned int temp = input_number;
 char *lower_hex;
 
@@ -96,7 +97,7 @@ lower_hex = malloc((count + 1) * sizeof(char));
 if (lower_hex == NULL)
 return (NULL);
 
-for (unsigned int index = count - 1; index > 0; index--)
+for (index = count - 1; index > 0; index--)
 {
 temp = input_number % 16;
 if (temp < 10)
@@ -121,7 +122,7 @@ return (lower_hex);
 char *Upper_Hex_spec(va_list s)
 {
 unsigned int input_number = va_arg(s, unsigned int);
-unsigned int count = 0;
+unsigned int index, count = 0;
 unsigned int temp = input_number;
 char *upper_hex;
 
@@ -133,7 +134,7 @@ upper_hex = malloc((count + 1) * sizeof(char));
 if (upper_hex == NULL)
 return (NULL);
 
-for (unsigned int index = count - 1; index > 0; index--)
+for (index = count - 1; index > 0; index--)
 {
 temp = input_number % 16;
 if (temp < 10)
